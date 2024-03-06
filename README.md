@@ -9,7 +9,7 @@ Para rodar o projeto React --> <br>
 </ul>
 <br>
 
-**PORTA PADRÃO : 5000**<br>
+**PORTA PADRÃO DO SITE: 5000**<br>
 
 Para rodar o projeto ASP --><br>
 <ul>
