@@ -5,7 +5,7 @@ export const HeaderContainer = styled.header`
   height: 10vh;
   display: flex;
   justify-content: center;
-  background-color: #000;
+  background-color: #fdd300;
   top: 0;
   z-index: 100;
 

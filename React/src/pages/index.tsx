@@ -62,7 +62,7 @@ import axios from 'axios';
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
             <link rel="preconnect" href="https://fonts.gstatic.com"/>
             <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
-            <link rel="icon" href="/OlhoSetima.svg"/>
+            <link rel="icon" href="/Logo.png"/>
         </Head>
         <NavBar />
         <S.Main>
@@ -84,10 +84,10 @@ import axios from 'axios';
               <S.itemCNPJ>Complemento: {companyData.estabelecimento.complemento}</S.itemCNPJ>
               <S.itemCNPJ>Cidade: {companyData.estabelecimento.cidade.nome}</S.itemCNPJ>
               <S.itemCNPJ>Estado: {companyData.estabelecimento.estado.nome}</S.itemCNPJ>
-              <div style={{display: 'flex'}}>
+              <S.itemCNPJ>
                 <S.textoLinkASP>Se você deseja salvar os dados dessa empresa no banco de dados&nbsp;</S.textoLinkASP>
-                <S.LinkASP target='_blank' href={`../../../ASP/cadastro.asp?razaoSocial=${companyData.razao_social}&cnpj=${companyData.estabelecimento.cnpj}&logradouro=${companyData.estabelecimento.logradouro}&numero=${companyData.estabelecimento.numero}&complemento=${companyData.estabelecimento.complemento}&municipio=${companyData.estabelecimento.cidade.nome}&uf=${companyData.estabelecimento.estado.nome}`}>clique aqui</S.LinkASP>
-              </div>
+                <S.LinkASP target='_blank' href={`http://localhost:5000/?razaoSocial=${companyData.razao_social}&cnpj=${companyData.estabelecimento.cnpj}&logradouro=${companyData.estabelecimento.logradouro}&numero=${companyData.estabelecimento.numero}&complemento=${companyData.estabelecimento.complemento}&municipio=${companyData.estabelecimento.cidade.nome}&uf=${companyData.estabelecimento.estado.nome}`}>clique aqui</S.LinkASP>
+              </S.itemCNPJ>
             </S.ContainerInfosCNPJ>
           )}
         </S.ContainerPrincipal>

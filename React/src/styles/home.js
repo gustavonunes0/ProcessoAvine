@@ -6,7 +6,7 @@ export const Main = styled.main`
   align-items: center;
   padding: 0;
   min-height: 100vh;
-  background-color: #000;
+  background-color: #006B2D;
 
   
 
@@ -25,7 +25,7 @@ export const ContainerPrincipal = styled.div`
     gap: 3rem;
     padding: 0 0 2rem 0;
     background-color: #fff;
-    background-image:  linear-gradient( to top, black, gray, transparent); 
+    background-image:  linear-gradient( to top, #006B2D, #fdba00 , #fdd300 ); 
 `;
 
 export const ContainerInfosCNPJ = styled.ul`
@@ -59,7 +59,7 @@ export const itemCNPJ = styled.li`
 `;
 
 export const SpanPrincipal = styled.span`
-    color: #000;
+    color: #006B2D;
     width: 70%;
     font-size: 2.5rem;
     font-weight: 700;
@@ -68,10 +68,10 @@ export const SpanPrincipal = styled.span`
     text-align: center;
 
   @media screen and (max-width: 800px) {
-    font-size: .7rem;
+    font-size: 1.7rem;
   }
   @media screen and (max-width: 600px) {
-    font-size: .7rem;
+    font-size: 1.2rem;
     letter-spacing: .05rem;
   }
 `;
@@ -82,13 +82,13 @@ export const textoLinkASP = styled.span`
     letter-spacing: .15rem;
     text-align: center;
 
-  @media screen and (max-width: 800px) {
-    font-size: 1.5rem;
-  }
-  @media screen and (max-width: 400px) {
-    font-size: 1.2rem;
-    width: 80%;
-  }
+@media screen and (max-width: 800px) {
+  font-size: .7rem;
+}
+@media screen and (max-width: 600px) {
+  font-size: .7rem;
+  letter-spacing: .05rem;
+}
 `;
 export const LinkASP = styled.a`
     color: red;
@@ -97,13 +97,13 @@ export const LinkASP = styled.a`
     letter-spacing: .15rem;
     text-align: center;
 
-  @media screen and (max-width: 800px) {
-    font-size: 1.5rem;
-  }
-  @media screen and (max-width: 400px) {
-    font-size: 1.2rem;
-    width: 80%;
-  }
+@media screen and (max-width: 800px) {
+  font-size: .7rem;
+}
+@media screen and (max-width: 600px) {
+  font-size: .7rem;
+  letter-spacing: .05rem;
+}
 `;
 
 export const InputCNPJ = styled.input`
@@ -118,6 +118,9 @@ export const InputCNPJ = styled.input`
     z-index: 2;
     letter-spacing: .2rem;
     
+  @media screen and (max-width: 1290px) {
+    font-size: .8rem;
+  }
   @media screen and (max-width: 850px) {
     width: 50%;
     height: 3rem;

@@ -7,7 +7,7 @@ export const Footer = styled.footer`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: #000;
+  background-color: #006B2D;
   gap: .6rem;
   @media screen and (max-width: 850px) {
     height: auto;

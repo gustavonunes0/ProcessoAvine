@@ -14,7 +14,7 @@ const NavBar: React.FC = () => {
           <S.Menu>
             <S.MenuItems> 
               <S.MenuItem>
-                <Image alt="" src="/OlhoSetima.svg" width={84} height={45} />
+                <Image alt="" src="/Logo.png" width={54} height={54} />
               </S.MenuItem>
             </S.MenuItems>
           </S.Menu>
