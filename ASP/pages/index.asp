@@ -17,11 +17,12 @@ conn.Open connectionString
                 background-color: #f4f4f4;
                 color: #333;
                 margin: 0;
-                padding: 2rem 0;
+                padding: 2rem 2rem;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                gap: 3rem;
             }
 
             form {
@@ -76,6 +77,7 @@ conn.Open connectionString
 
             td {
                 border-right: 1px solid #ddd;
+                font-size: .8rem;
             }
 
             td:last-child {
@@ -84,18 +86,20 @@ conn.Open connectionString
         </style>
     </head>
 <body>
-
 <%
 Response.AddHeader "Access-Control-Allow-Origin", "*"
 
+Function GetEmpresas()
+    Dim sqlEmpresas, rsEmpresas
+    sqlEmpresas = "SELECT * FROM empresa"
+    Set rsEmpresas = conn.Execute(sqlEmpresas)
+    Set GetEmpresas = rsEmpresas
+End Function
 
-Dim sqlEmpresas, rsEmpresas
-sqlEmpresas = "SELECT * FROM empresa"
-Set rsEmpresas = conn.Execute(sqlEmpresas)
+Set rsEmpresas = GetEmpresas()
 %>
 
 <%
-
 Dim idEmpresa, nmRazaoSocial, nrCnpj, nmLogradouro, nrNumero, dsComplemento, nmMunicipio, nmEstado
 nmRazaoSocial = Request.QueryString("razaoSocial")
 nrCnpj = Request.QueryString("cnpj")
@@ -129,6 +133,8 @@ If Request.ServerVariables("REQUEST_METHOD") = "POST" Then
         Else
             Response.Write "Empresa cadastrada com sucesso!"
         End If
+
+        Set rsEmpresas = GetEmpresas()
     Else
         Response.Write "Já existe uma empresa cadastrada com esse CNPJ."
     End If
@@ -137,6 +143,7 @@ If Request.ServerVariables("REQUEST_METHOD") = "POST" Then
     Set rsVerificaCnpj = Nothing
 End If
 %>
+
 
 <form method="post">
     <input type="hidden" name="ID_EMPRESA" value="<%=idEmpresa%>">
