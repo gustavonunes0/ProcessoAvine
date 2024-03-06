@@ -68,6 +68,36 @@ export const SpanPrincipal = styled.span`
     text-align: center;
 
   @media screen and (max-width: 800px) {
+    font-size: .7rem;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: .7rem;
+    letter-spacing: .05rem;
+  }
+`;
+export const textoLinkASP = styled.span`
+    color: red;
+    font-weight: 600;
+    z-index: 2;
+    letter-spacing: .15rem;
+    text-align: center;
+
+  @media screen and (max-width: 800px) {
+    font-size: 1.5rem;
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 1.2rem;
+    width: 80%;
+  }
+`;
+export const LinkASP = styled.a`
+    color: red;
+    font-weight: 600;
+    z-index: 2;
+    letter-spacing: .15rem;
+    text-align: center;
+
+  @media screen and (max-width: 800px) {
     font-size: 1.5rem;
   }
   @media screen and (max-width: 400px) {

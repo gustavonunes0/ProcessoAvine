@@ -84,6 +84,10 @@ import axios from 'axios';
               <S.itemCNPJ>Complemento: {companyData.estabelecimento.complemento}</S.itemCNPJ>
               <S.itemCNPJ>Cidade: {companyData.estabelecimento.cidade.nome}</S.itemCNPJ>
               <S.itemCNPJ>Estado: {companyData.estabelecimento.estado.nome}</S.itemCNPJ>
+              <div style={{display: 'flex'}}>
+                <S.textoLinkASP>Se você deseja salvar os dados dessa empresa no banco de dados&nbsp;</S.textoLinkASP>
+                <S.LinkASP target='_blank' href={`../../../ASP/cadastro.asp?razaoSocial=${companyData.razao_social}&cnpj=${companyData.estabelecimento.cnpj}&logradouro=${companyData.estabelecimento.logradouro}&numero=${companyData.estabelecimento.numero}&complemento=${companyData.estabelecimento.complemento}&municipio=${companyData.estabelecimento.cidade.nome}&uf=${companyData.estabelecimento.estado.nome}`}>clique aqui</S.LinkASP>
+              </div>
             </S.ContainerInfosCNPJ>
           )}
         </S.ContainerPrincipal>
