@@ -11,8 +11,9 @@ Para rodar o projeto ASP --><br>
   <li>Apontar endereço fisico para o index.asp do projeto</li>
 </ul><br>
 
-**VOU DEIXAR MEU BANCO DE DADOS ONLINE PARA FACILITAR NOS TESTES**<br>
-**Caso queira mudar o Banco de Dados, lembre-se de alterar a ConnectionString**<br>
+$**VOU DEIXAR MEU BANCO DE DADOS ONLINE PARA FACILITAR NOS TESTES**<br>
+<br>
+$**Caso queira mudar o Banco de Dados, lembre-se de alterar a ConnectionString**<br>
 
 SCRIPT DE CRIAÇÃO DA TABELA NO BANCO DE DADOS <br>
 <br>
