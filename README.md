@@ -1,10 +1,16 @@
 Para rodar o projeto React --> <br>
+
+**PORTA PADRÃO : 3000**<br>
+
 <ul>
   <li>npm i</li>
   <li>npm run dev</li>
   <li>ALTERAR PORTA LOCALHOST DO PROJETO ASP PARA O LINK REDIRECIONAR CORRETAMENTE</li>
 </ul>
 <br>
+
+**PORTA PADRÃO : 5000**<br>
+
 Para rodar o projeto ASP --><br>
 <ul>
   <li>Criar site no Gerenciador de Servidor</li>
