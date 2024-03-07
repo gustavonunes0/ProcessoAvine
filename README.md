@@ -1,3 +1,5 @@
+**LINK DEPLOY REACT : https://pesquisa-cnpj-phi.vercel.app/**
+
 Para rodar o projeto React --> <br>
 
 **PORTA PADRÃO : 3000**<br>
