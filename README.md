@@ -22,7 +22,7 @@ Para rodar o projeto ASP --><br>
 <br>
 
 <ul>
-  <li>Instalar ODBC do Banco escolhindo **(Caso decida manter o my SQL instale o MySQL ODBC 8.3 ANSI Driver)**</li>
+  <li>Instalar ODBC do Banco escolhindo **(Caso decida manter com está no código, instale o MySQL ODBC 8.3 ANSI Driver)**</li>
   <li>Criar site no Gerenciador de Servidor</li>
   <li>Apontar endereço fisico para o index.asp do projeto</li>
   <li>Criar documento padrão "index.asp"</li>
