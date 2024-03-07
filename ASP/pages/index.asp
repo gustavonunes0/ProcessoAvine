@@ -14,7 +14,7 @@ conn.Open connectionString
         <style>
             body {
                 font-family: Arial, sans-serif;
-                background-color: #f4f4f4;
+                background-image:  linear-gradient( to top, #006B2D, #fdba00 , #fdd300 ); 
                 color: #333;
                 margin: 0;
                 padding: 2rem 2rem;
@@ -83,6 +83,20 @@ conn.Open connectionString
             td:last-child {
                 border-right: none;
             }
+
+            a{
+                background-color: red;
+                color: #fff;
+                text-decoration: none;
+                padding: .4rem;
+                border-radius: .3rem;
+            }
+
+            #tabela{
+                padding: .5rem;
+                background-color: #fff;
+                border-radius: .44rem;
+            }
         </style>
     </head>
 <body>
@@ -143,6 +157,20 @@ If Request.ServerVariables("REQUEST_METHOD") = "POST" Then
     Set rsVerificaCnpj = Nothing
 End If
 %>
+<%
+If Request.QueryString("action") = "delete" Then
+    Dim idEmpresaParaDeletar
+    idEmpresaParaDeletar = Request.QueryString("id")
+    
+    If IsNumeric(idEmpresaParaDeletar) Then
+        Dim sqlDeletarEmpresa
+        sqlDeletarEmpresa = "DELETE FROM empresa WHERE ID_EMPRESA = " & idEmpresaParaDeletar
+        conn.Execute(sqlDeletarEmpresa)
+        
+        Response.Redirect(Request.ServerVariables("SCRIPT_NAME"))
+    End If
+End If
+%>
 
 
 <form method="post">
@@ -165,33 +193,40 @@ End If
     <input type="submit" value="Adicionar Empresa">
 </form>
 
-<table>
-    <tr>
-        <th>Razão Social</th>
-        <th>CNPJ</th>
-        <th>Logradouro</th>
-        <th>Número</th>
-        <th>Complemento</th>
-        <th>Município</th>
-        <th>Estado</th>
-    </tr>
-
-    <% Do While Not rsEmpresas.EOF %>
+<div id="tabela">
+    <table>
         <tr>
-            <td><%=rsEmpresas("NM_RAZAO_SOCIAL")%></td>
-            <td><%=rsEmpresas("NR_CNPJ")%></td>
-            <td><%=rsEmpresas("NM_LOGRADOURO")%></td>
-            <td><%=rsEmpresas("NR_NUMERO")%></td>
-            <td><%=rsEmpresas("DS_COMPLEMENTO")%></td>
-            <td><%=rsEmpresas("NM_MUNICIPIO")%></td>
-            <td><%=rsEmpresas("NM_ESTADO")%></td>
+            <th>Razão Social</th>
+            <th>CNPJ</th>
+            <th>Logradouro</th>
+            <th>Número</th>
+            <th>Complemento</th>
+            <th>Município</th>
+            <th>Estado</th>
+            <th>Ações</th> <!-- Adicione um cabeçalho para a coluna de ações -->
         </tr>
-        <% rsEmpresas.MoveNext()
-    Loop
-    rsEmpresas.Close
-    Set rsEmpresas = Nothing
-    %>
-</table>
+
+        <% Do While Not rsEmpresas.EOF %>
+            <tr>
+                <td><%=rsEmpresas("NM_RAZAO_SOCIAL")%></td>
+                <td><%=rsEmpresas("NR_CNPJ")%></td>
+                <td><%=rsEmpresas("NM_LOGRADOURO")%></td>
+                <td><%=rsEmpresas("NR_NUMERO")%></td>
+                <td><%=rsEmpresas("DS_COMPLEMENTO")%></td>
+                <td><%=rsEmpresas("NM_MUNICIPIO")%></td>
+                <td><%=rsEmpresas("NM_ESTADO")%></td>
+                <td>
+                    <a href="?action=delete&id=<%=rsEmpresas("ID_EMPRESA")%>" onclick="return confirm('Tem certeza que deseja excluir esta empresa?');">Excluir</a>
+                </td>
+            </tr>
+            <% rsEmpresas.MoveNext()
+        Loop
+        rsEmpresas.Close
+        Set rsEmpresas = Nothing
+        %>
+    </table>
+</div>
+
 
 </body>
 </html>
