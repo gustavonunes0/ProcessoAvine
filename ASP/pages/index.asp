@@ -203,7 +203,7 @@ End If
             <th>Complemento</th>
             <th>Município</th>
             <th>Estado</th>
-            <th>Ações</th> <!-- Adicione um cabeçalho para a coluna de ações -->
+            <th>Ações</th> 
         </tr>
 
         <% Do While Not rsEmpresas.EOF %>
