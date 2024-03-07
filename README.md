@@ -2,6 +2,8 @@
 
 Para rodar o projeto React --> <br>
 
+<img src='/React/public/Tela1Avine.png' alt='Tela react'/>
+
 **PORTA PADRÃO : 3000**<br>
 
 <ul>
