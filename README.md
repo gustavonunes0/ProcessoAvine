@@ -3,6 +3,7 @@
 Para rodar o projeto React --> <br>
 
 <img src='React/public/Tela1Avine.PNG' alt='Tela react'/>
+<br>
 
 **PORTA PADRÃO : 3000**<br>
 
@@ -16,6 +17,10 @@ Para rodar o projeto React --> <br>
 **PORTA PADRÃO DO SITE: 5000**<br>
 
 Para rodar o projeto ASP --><br>
+
+<img src='React/public/Tela2Avine.PNG' alt='Tela asp'/>
+<br>
+
 <ul>
   <li>Instalar ODBC do Banco escolhindo **(Caso decida manter o my SQL instale o MySQL ODBC 8.3 ANSI Driver)**</li>
   <li>Criar site no Gerenciador de Servidor</li>
